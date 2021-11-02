@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import styled from 'styled-components'
+import narutoImg from "../src/imagens/naruto.png"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+const App = () => {
+    return(
+        <Content> 
+        <p>quote xpto - Speaker</p>
+        <button >Quote No Jutsu</button>
+        <NarutoImg src={narutoImg} alt="Naruto"/>
+        </Content>
+    )
 }
+
+const Content = styled.div({
+    height:"100vh",
+    padding:"0 50px",
+    display:"flex",
+    justifyContent:"center",
+    alingItems:"center",
+
+})
+
+const NarutoImg = styled.img({
+    maxWidth:"50vw",
+    alignSelf:"flex-end",
+})
+
+
 
 export default App;
