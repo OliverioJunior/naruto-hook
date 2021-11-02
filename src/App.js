@@ -1,15 +1,16 @@
 import React from 'react';
 import styled from 'styled-components'
 import narutoImg from "../src/imagens/naruto.png"
-
+import { Quotes } from './components/quotes/Quotes';
 
 const App = () => {
     return(
+        
         <Content> 
-        <p>quote xpto - Speaker</p>
-        <button >Quote No Jutsu</button>
+        <Quotes quote={'ok'} speaker={"Speaker"}/>
         <NarutoImg src={narutoImg} alt="Naruto"/>
         </Content>
+       
     )
 }
 
@@ -17,8 +18,14 @@ const Content = styled.div({
     height:"100vh",
     padding:"0 50px",
     display:"flex",
+    /* flexDirection:"column", */
     justifyContent:"center",
     alingItems:"center",
+    button:{
+        display:"block",
+        maxHeight: "30px",
+        alignItems:"center",
+    }
 
 })
 

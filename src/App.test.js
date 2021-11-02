@@ -1,10 +1,15 @@
 import {render,screen} from '@testing-library/react';
 import {App} from './App';
 
-test('renders the app', () =>{
+test('renders the app woth a button, a quote and a button', () =>{
     render(<App/>);
 
-    const text = screen.getByText(/Hello/i)
 
-    expect(text).toBeInTheDocument();
+    const buttonEl = screen.getByRole('button')
+    const imageEl = screen.getByRole('img')
+    const textEl = screen.getByText(/Speaker/i)
+
+    expect(buttonEl).toBeInTheDocument();
+    expect(imageEl).toBeInTheDocument();
+    expect(textEl).toBeInTheDocument();
 })
