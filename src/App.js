@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 import narutoImg from "../src/imagens/naruto.png"
-import { Quotes } from './components/quotes/Quotes';
+import { Quotes } from './components/quotes';
 
 const App = () => {
     return(

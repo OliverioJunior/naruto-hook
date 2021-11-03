@@ -1,2 +1,3 @@
-export * from './GlobalStyle';
-export * from './Quotes';
+export * from './globalStyled';
+export * from './quotes';
+export * from './button'
