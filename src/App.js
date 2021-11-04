@@ -1,13 +1,27 @@
 import React from 'react';
-import styled from 'styled-components'
-import narutoImg from "../src/imagens/naruto.png"
+import { useState } from 'react';
+import styled from 'styled-components';
+import narutoImg from "../src/imagens/naruto.png";
 import { Quotes } from './components/quotes';
+import { getQuote } from './services';
 
 const App = () => {
+
+    const [quoteState, setQouteState]= useState({quote: 'ok', speaker:'Speaker'});
+
+    
+    const onUpdate = async () => {
+        const resQuote = await getQuote();
+        console.log(resQuote)
+    }
+
     return(
         
         <Content> 
-        <Quotes quote={'ok'} speaker={"Speaker"}/>
+        <Quotes 
+        quote={quoteState.quote} 
+        speaker={quoteState.speaker} 
+        onUpdate = {onUpdate}/>
         <NarutoImg src={narutoImg} alt="Naruto"/>
         </Content>
        
